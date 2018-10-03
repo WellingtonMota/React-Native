@@ -19,9 +19,6 @@ Bootstrap RN
     'yarn add react-redux --save'
     'yarn add redux-thunk --save'
 
-- Iniciar o Git:
-    'git init'
-    'git add .'
 
 FIX:
 - Em caso de erro de carregamento, execute o comando a seguir:
