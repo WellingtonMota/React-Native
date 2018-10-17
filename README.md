@@ -1,4 +1,4 @@
-# repository for project startup projects React Native
+# Repository for project startup projects React Native
 
 ## Install packages Nodejs:
     - eslint-config-rallycoding
