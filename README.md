@@ -26,5 +26,12 @@ FIX:
 ## Em caso de erro de carregamento, execute o comando a seguir:
 
 ### 'yarn add @babel/runtime'
-ou
+
 ### 'adb reverse tcp:8081 tcp:8081'
+
+### npm run start --reset-cache
+ou
+### react-native start --reset-cache
+
+
+
