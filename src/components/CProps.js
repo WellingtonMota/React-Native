@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
-class CompExample1 extends Component {
+export default class CProps extends Component {
   render() {
     return (
       <View>
@@ -12,5 +12,3 @@ class CompExample1 extends Component {
     );
   }
 }
-
-export default CompExample1;

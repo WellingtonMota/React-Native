@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-import CompExample1 from './src/components/example1';
+import CProps from './src/components/CProps';
+import CFlatList from './src/components/CFlatList';
 
 class CompExample extends Component {
   render() {
@@ -40,7 +41,11 @@ export default class App extends Component {
           title='Botão'
           onPress={() => { this.atualizaTexto(); }}
         />
-        <CompExample1 escolha={this.state.texto} />
+
+        <CProps escolha={this.state.texto} />
+
+        <Text style={styles.example}>Exemplo 1: FlatList</Text>
+        <CFlatList />
       </View>
     );
   }
