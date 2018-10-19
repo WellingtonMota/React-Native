@@ -40,7 +40,7 @@ export default class App extends Component {
           title='Botão'
           onPress={() => { this.atualizaTexto(); }}
         />
-        <CompExample1 />
+        <CompExample1 escolha={this.state.texto} />
       </View>
     );
   }
