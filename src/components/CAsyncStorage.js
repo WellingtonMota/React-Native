@@ -11,28 +11,34 @@ export default class CAsyncStorage extends Component {
 
   async getKey() {
     try {
-      const value = await AsyncStorage.getItem('@MySuperStore:key');
+      const value = await AsyncStorage.getItem('@test');
       this.setState({ myKey: value });
     } catch (error) {
-      console.log(`Error retrieving data${error}`);
+      alert(`Error retrieving data${error}`);
     }
   }
 
-  async saveKey(value) {
+  async saveKey() {
+    const json = {
+      1: 'teste 1',
+      2: 'teste 2',
+      3: 'teste 3'
+    };
+
     try {
-      await AsyncStorage.setItem('@MySuperStore:key', value);
+      await AsyncStorage.setItem('@test', JSON.stringify(json));
     } catch (error) {
-      console.log(`Error saving data${error}`);
+      alert(`Error saving data${error}`);
     }
   }
 
   async resetKey() {
     try {
-      await AsyncStorage.removeItem('@MySuperStore:key');
-      const value = await AsyncStorage.getItem('@MySuperStore:key');
+      await AsyncStorage.removeItem('@test');
+      const value = await AsyncStorage.getItem('@test');
       this.setState({ myKey: value });
     } catch (error) {
-      console.log(`Error resetting data${error}`);
+      alert(`Error resetting data${error}`);
     }
   }
 
@@ -43,11 +49,12 @@ export default class CAsyncStorage extends Component {
           Welcome to Demo AsyncStorage!
         </Text>
 
-        <TextInput
-          style={styles.formInput}
-          placeholder="Enter key you want to save!"
-          value={this.state.myKey}
-          onChangeText={(value) => this.saveKey(value)}
+        <Button
+          style={styles.formButton}
+          onPress={this.saveKey.bind(this)}
+          title="Save Key"
+          color="#DCFDCF"
+          accessibilityLabel="Save Key"
         />
 
         <Button
