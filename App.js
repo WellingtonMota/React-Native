@@ -3,6 +3,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import CProps from './src/components/CProps';
 import CFlatList from './src/components/CFlatList';
+import CAsyncStorage from './src/components/CAsyncStorage';
 
 class CompExample extends Component {
   render() {
@@ -35,7 +36,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Bootstrap React Native!</Text>
-        <Text style={styles.example}>Exemplo 1: Props e states</Text>
+        {/* <Text style={styles.example}>Exemplo 1: Props e states</Text>
         <CompExample propriedade1='ABC' propriedade2='xyz' teste={this.state.texto} />
         <Button 
           title='Botão'
@@ -45,7 +46,10 @@ export default class App extends Component {
         <CProps escolha={this.state.texto} />
 
         <Text style={styles.example}>Exemplo 1: FlatList</Text>
-        <CFlatList />
+        <CFlatList /> */}
+
+        <Text style={styles.example}>Exemplo 2: AsyncStorage</Text>
+        <CAsyncStorage />
       </View>
     );
   }
